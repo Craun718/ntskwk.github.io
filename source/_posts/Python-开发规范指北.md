@@ -31,7 +31,7 @@ uvicorn main:app --reload --port 8001
 
 在这个例子中，我们使用了 uvicorn 来启动`main.py`中的 fastapi 服务。但如果在这个程序中执行`sys.argv[0]`，将获取到的路径会是`uvicorn`的而非`main.py`的。
 
-### 不要直接使用内置函数获取工作目录
+### 不要用内置函数获取工作目录
 
 任何情况下，我们都强烈建议**不要**使用`os.getcwd()`和`Path.cwd()`方法。来看下面的例子。
 
