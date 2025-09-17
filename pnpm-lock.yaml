@@ -33,7 +33,7 @@ importers:
         specifier: ^2.4.3
         version: 2.4.3(chokidar@3.6.0)
       hexo-generator-searchdb:
-        specifier: ^1.4.1
+        specifier: ^1.5.0
         version: 1.5.0(chokidar@3.6.0)
       hexo-generator-sitemap:
         specifier: ^3.0.1
@@ -45,13 +45,13 @@ importers:
         specifier: ^1.1.3
         version: 1.1.3
       hexo-pangu:
-        specifier: ^0.2.3
-        version: 0.2.3
+        specifier: ^0.4.1
+        version: 0.4.1
       hexo-renderer-ejs:
         specifier: ^2.0.0
         version: 2.0.0
       hexo-renderer-marked:
-        specifier: ^7.0.0
+        specifier: ^7.0.1
         version: 7.0.1
       hexo-renderer-pug:
         specifier: ^3.0.0
@@ -63,8 +63,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       hexo-theme-butterfly:
-        specifier: ^5.2.2
-        version: 5.4.3
+        specifier: ^5.5.0
+        version: 5.5.0
       hexo-util:
         specifier: ^3.3.0
         version: 3.3.0
@@ -532,8 +532,8 @@ packages:
     resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
     engines: {node: '>=14'}
 
-  hexo-pangu@0.2.3:
-    resolution: {integrity: sha512-JwjkSjLkiej3BgucboeNZy6Ol87DPL9WEnpIXgqbOdn5Vb1+vLvhjPZMsv9tpWBLaz2aAY841vj5GMiuH4J0LQ==}
+  hexo-pangu@0.4.1:
+    resolution: {integrity: sha512-LE+hkkCadtoUCoNA3dkhladDKljmhc1rxTGNpdhtVKSVZJ+yc1DFnoxa7aPxMMgmQUw1iQtI+gyJZggMTAeTOg==}
 
   hexo-renderer-ejs@2.0.0:
     resolution: {integrity: sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ==}
@@ -555,8 +555,8 @@ packages:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
 
-  hexo-theme-butterfly@5.4.3:
-    resolution: {integrity: sha512-TfR4uRSP/XfNCO0C0uoJ8XXuOyrH58Ie0L+BUBPshc3lW8A74QgjPcqESsDriIjlTdrKzjIC3X1FkN6CZqOJew==}
+  hexo-theme-butterfly@5.5.0:
+    resolution: {integrity: sha512-9QKnKcGBfKEJA0mgq0ve7llyglJdao3txv/IdK97oGUjJQTdkZXC5u8BnDHKB6je/rYZcEoxwqm/hl1TbDp4Ng==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -686,6 +686,15 @@ packages:
       canvas:
         optional: true
 
+  jsdom@26.1.0:
+    resolution: {integrity: sha512-Cvc9WUhxSMEo4McES3P7oK3QaXldCfNWp7pl2NNeiIFlCoLr3kfq9kb1fxftiwk1FLV7CvpvDfonxtzUDeSOPg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      canvas: ^3.0.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
+
   jsonparse@1.3.1:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
@@ -761,6 +770,9 @@ packages:
   moment-timezone@0.5.48:
     resolution: {integrity: sha512-f22b8LV1gbTO2ms2j2z13MuPogNoh5UzxL3nzNAYKGraILnbGc9NEE6dyiiiLv46DGRb8A4kg8UKWLjPthxBHw==}
 
+  moment-timezone@0.6.0:
+    resolution: {integrity: sha512-ldA5lRNm3iJCWZcBCab4pnNL3HSZYXVb/3TYr75/1WCTWYuTqYUb5f/S384pncYjJ88lbO8Z4uPDvmoluHJc8Q==}
+
   moment@2.30.1:
     resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
@@ -803,6 +815,9 @@ packages:
   nwsapi@2.2.21:
     resolution: {integrity: sha512-o6nIY3qwiSXl7/LuOU0Dmuctd34Yay0yeuZRLFmDPrrdHpXKFndPj3hM+YEPVHYC5fx2otBx4Ilc/gyYSAUaIA==}
 
+  nwsapi@2.2.22:
+    resolution: {integrity: sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==}
+
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -826,8 +841,9 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
-  pangu@4.0.7:
-    resolution: {integrity: sha512-weZKJIwwy5gjt4STGVUH9bix3BGk7wZ2ahtIypwe3e/mllsrIZIvtfLx1dPX56GcpZFOCFKmeqI1qVuB9enRzA==}
+  pangu@7.2.0:
+    resolution: {integrity: sha512-ak81fYnTD36UvRxp6yNmCyV8T/s9dtv/OS9LjTNwh3TMo5i1OhtLmFDxyw1rTZWAnfrj/00gtl883+RE2r+4tA==}
+    engines: {node: '>=18.0.0'}
     hasBin: true
 
   parse5@7.3.0:
@@ -1606,10 +1622,10 @@ snapshots:
 
   hexo-pagination@3.0.0: {}
 
-  hexo-pangu@0.2.3:
+  hexo-pangu@0.4.1:
     dependencies:
-      jsdom: 25.0.1
-      pangu: 4.0.7
+      jsdom: 26.1.0
+      pangu: 7.2.0
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -1656,12 +1672,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-butterfly@5.4.3:
+  hexo-theme-butterfly@5.5.0:
     dependencies:
       hexo-renderer-pug: 3.0.0
       hexo-renderer-stylus: 3.0.1
       hexo-util: 3.3.0
-      moment-timezone: 0.5.48
+      moment-timezone: 0.6.0
     transitivePeerDependencies:
       - supports-color
 
@@ -1857,6 +1873,33 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  jsdom@26.1.0:
+    dependencies:
+      cssstyle: 4.6.0
+      data-urls: 5.0.0
+      decimal.js: 10.6.0
+      html-encoding-sniffer: 4.0.0
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.6
+      is-potential-custom-element-name: 1.0.1
+      nwsapi: 2.2.22
+      parse5: 7.3.0
+      rrweb-cssom: 0.8.0
+      saxes: 6.0.0
+      symbol-tree: 3.2.4
+      tough-cookie: 5.1.2
+      w3c-xmlserializer: 5.0.0
+      webidl-conversions: 7.0.0
+      whatwg-encoding: 3.1.1
+      whatwg-mimetype: 4.0.0
+      whatwg-url: 14.2.0
+      ws: 8.18.3
+      xml-name-validator: 5.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
   jsonparse@1.3.1: {}
 
   jstransformer@1.0.0:
@@ -1916,6 +1959,10 @@ snapshots:
     dependencies:
       moment: 2.30.1
 
+  moment-timezone@0.6.0:
+    dependencies:
+      moment: 2.30.1
+
   moment@2.30.1: {}
 
   morgan@1.10.1:
@@ -1955,6 +2002,8 @@ snapshots:
 
   nwsapi@2.2.21: {}
 
+  nwsapi@2.2.22: {}
+
   object-assign@4.1.1: {}
 
   on-finished@2.3.0:
@@ -1977,7 +2026,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  pangu@4.0.7: {}
+  pangu@7.2.0: {}
 
   parse5@7.3.0:
     dependencies:
