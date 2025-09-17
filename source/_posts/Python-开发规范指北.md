@@ -49,4 +49,55 @@ foo/
 /foo/foo1> python /foo/foo2/main.py
 ```
 
-此时获取的结果时`foo1`而非`foo2`。
+此时获取的结果是`foo1`而非`foo2`。
+
+### 谨慎使用 with 语句操作临时文件和临时目录
+
+来看一个 Fastapi 中的例子。
+
+```python
+@app.get("/repeat")
+def read_root(msg: str):
+    """Repeat the message in a file and return it as a file response."""
+    with TemporaryDirectory() as tmpdir:
+        with open(f"{tmpdir}/msg.txt", "w", encoding="utf-8") as f:
+            f.write(msg)
+
+        return FileResponse(f"{tmpdir}/msg.txt", filename="msg.txt")
+```
+
+在这个例子中，使用了`TemporaryDirectory`来创建一个临时目录并在其中创建了一个文件，然后将这个文件作为响应返回给客户端。然而，这里存在一个问题——这个函数执行`return`语句之前，会先对`with`语句进行后处理。在`with`语句结束时，`TemporaryDirectory`就会被删除，所以返回的`FileResponse`实际上是在外部进行处理的。也就是说这段代码实际上是会在`with`语句的外面读取这个文件，因此将会收到一个`FileNotFound`错误。（我个人使用的做法是，将文件写入 buffer 变量，然后再进行返回）
+
+## Python 的语言特性
+
+### 不会发生的变量遮盖
+
+在 Python 中，变量初始化语句和复制的语句是相同的。同时，`for`语句不具备单独的作用域。因此，在`for`循环中，如果将程序过程的中途变量定义为与外部相同，则会错误的修改外部变量。
+
+```javascript
+// javascript
+if (true) {
+  let a = 1;
+}
+
+a; // ReferenceError: a is not defined
+
+for (let i = 0; i < 10; i++) {
+  let b = 2;
+}
+
+b; // ReferenceError: b is not defined
+```
+
+```Python
+# python
+if True:
+    a = 1
+
+a  # 1
+
+for i in range(10):
+    b = 2
+
+b  # 2
+```
