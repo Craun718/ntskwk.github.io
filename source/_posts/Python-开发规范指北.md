@@ -43,10 +43,10 @@ foo/
    └─ main.py
 ```
 
-如果在 foo1 尝试执行`python foo/foo2/main.py`，可能会产生意料外的状况。
+如果在 foo1 尝试执行`python ../foo2/main.py`，可能会产生意料外的状况。
 
 ```bash
-/foo/foo1> python /foo/foo2/main.py
+/foo/foo1> python ../foo2/main.py
 ```
 
 此时获取的结果是`foo1`而非`foo2`。
