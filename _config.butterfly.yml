@@ -20,7 +20,7 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   服务||fas fa-tools:
-      gh-proxy: https://gh-proxy.natsuu.top/ || fas fa-code-branch
+      ghproxy-plus: https://gpp.natsuu.top/ || fas fa-code-branch
       docker-proxy: https://docker.natsuu.top/ || fab fa-docker
       rsshub: https://rsshub.natsuu.top/ || fas fa-rss
       Notes: https://space-docs.natsuu.top/ || fas fa-book-open
